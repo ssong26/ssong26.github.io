@@ -31,10 +31,61 @@
 
 </head>
  
-<p>Hello 大家好</p>
-<p>I am Siyuan Song. This is my personal website. </p>
-<p>Thanks for visiting this page. My personal profiles are listed below</p>
+<body>
+    <div class="header">
+        <h2>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h2>
+    </div>
 
-<ul>
-  <li> <a href="https://scholar.google.com/citations?user=6_ox6uIAAAAJ&hl=en">Google-Scholar</a> </li>
-</ul>
+    <div class="col-lg-6">
+        <h3> Gragh 1 - Top 10 video games</h3>
+
+            Year of Interest ([1980,2017] or all): <input type="text" name="Year of Interest" id="inp_year"><br>
+            <button onclick="setGraph01(document.getElementById('inp_year').value)">Check</button>
+
+        <div id="graph1"> 
+        </div>
+        <p> 
+            <br>
+            <br>
+            Note:
+            <br>
+            [1] Games with the same name in different platforms or different years are considered as different game. To distinguish them, we reset the name as "name + platform + year".
+            <br>
+            [2] The top games are ranked based on their global sales.
+            <br>
+            [3] Year of interests: Include all and [1980,2017].
+            <br>
+            [4] Name: Name of the Game.
+            <br>
+            [5] Global Sales: (In Millions).
+
+        </p>
+
+
+        <hr>
+    </div>
+    <div class="col-lg-7">
+        <h3> Graph 2 - Popular genre in different region - World Map (Unit: Millions) </h3>
+        <div id="graph2"></div><br/>
+        <p> 
+            <br>
+            <br>
+            Note:
+            <p>Hello 大家好</p>
+            <p>I am Siyuan Song. This is my personal website. </p>
+            <p>Thanks for visiting this page. My personal profiles are listed below</p>
+            <ul>
+                <li> <a href="https://scholar.google.com/citations?user=6_ox6uIAAAAJ&hl=en">Google-Scholar</a> </li>
+            </ul>   
+        </p>
+
+        <hr>
+    </div>
+   
+</body>
+</html> 
+        
+        
+        
+        
+
