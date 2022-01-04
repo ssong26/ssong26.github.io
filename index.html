@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>Assignment 6 &laquo; Data Visualization Dashboard&raquo;</title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css"/>
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
+
+
+        <style type="text/css">
+
+            button:focus {
+                outline: 0 !important;
+            }
+            svg {
+                display: block;
+                margin: 0 auto;
+                font: 10px sans-serif;
+            }
+            .tooltip {
+                position: absolute;
+                font-size: 12px;
+                min-width: 100px;
+                padding: 10px;
+                width:  auto;
+                height: auto;
+            }
+        </style>
+
+
+    </head>
+
+
+<body>
+    <div class="header">
+        <h2>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h2>
+    </div>
+
+    <div class="col-lg-6">
+        <h3> Gragh 1 - Top 10 video games</h3>
+
+            Year of Interest ([1980,2017] or all): <input type="text" name="Year of Interest" id="inp_year"><br>
+            <button onclick="setGraph01(document.getElementById('inp_year').value)">Check</button>
+
+        <div id="graph1"> 
+        </div>
+        <p> 
+            <br>
+            <br>
+            Note:
+            <br>
+            [1] Games with the same name in different platforms or different years are considered as different game. To distinguish them, we reset the name as "name + platform + year".
+            <br>
+            [2] The top games are ranked based on their global sales.
+            <br>
+            [3] Year of interests: Include all and [1980,2017].
+            <br>
+            [4] Name: Name of the Game.
+            <br>
+            [5] Global Sales: (In Millions).
+
+        </p>
+
+
+        <hr>
+    </div>
+    <div class="col-lg-7">
+        <h3> Graph 2 - Popular genre in different region - World Map (Unit: Millions) </h3>
+        <div id="graph2"></div><br/>
+        <p> 
+            <br>
+            <br>
+            Note:
+            <br>
+            [1] The Most Popular Genre in North America, Europe and other regions is Action. The Most Popular Genre in Japan is Role-Playing. The evaluation of the popular Genre is based on the sum of the regional sales for every type of genre.
+            <br>
+            [2] The black outer circle represents the sum of sales for each region.
+            <br>
+            [3] The Inner filled circle represents the most popular genre. 
+            <br>
+            [4] The area of the circle is proportional to the value of the sale.
+            <br>
+            [5] The unit for the sale is (Million).
+        </p>
+
+        <hr>
+    </div>
+
+
+
+    <div class="col-lg-8">
+        <h3>Graph 3 - Top publisher for each genre</h3>
+        (>_<)--<button type="button" class="btn btn-info" onclick="setGraph03('Total_Number')">Total Number</button>--(>_<)
+        --<button type="button" class="btn btn-info" onclick="setGraph03('Total_Sale')">Total Sale</button>--(>_<)
+        --<button type="button" class="btn btn-info" onclick="setGraph03('Best_Sale')">Best Sale</button>--(>_<)
+        --<button type="button" class="btn btn-info" onclick="setGraph03('Sale_Per')">Average Sale per Game</button>--(>_<)
+        <div id="graph3"></div>
+        <p> 
+            <br>
+            <br>
+            Note:
+            <br>
+            <b> [Important] </b> This is a box plot. This plot has dynamic stats calculation. I calculate the minimum, the maximum, the sample median, and the first and third quartiles. When the criterion changes, these statistical information will change correspondingly. These values show the distribution of the data, so they are statistical.
+            <br>
+            [1] Total Number: The total number of games sold by the current publisher. 
+            <br>
+            [2] Total Sale: Global Sale of the current publisher.
+            <br>
+            [3] Best Sale: The highest sale for the current publisher.
+            <br>
+            [4] Average Sale per Game: The Total Sale divided by the Total Number.
+        </p>
+        <hr>
+    </div>
+    <div class="col-lg-9">
+        <h3>Written Question</h3>
+        <p>
+        [1] Describe how your dashboard answers the questions presented. You don't have to address every question directly, but should at a high level address the main questions. (10 points)
+        <br>
+        <br>
+        Answer:
+        <br>
+        The first question ask me about the top 10 games for each year. At first, I set a criterion that best game is the game which has the highest global sales. Since the global sale is a real number, the "barplot" is one of the best way to compare different values. In order to show the results for different years, the dynamic "barplot" is adopted. After filling in the year of interest, the user can check the corresponding top 10 games with their global sales in that year. Instead of setting a x-coordinate, I inserted the value of the global sales next to the bar. 
+        <br>
+        <br>
+        The second question ask me about the popular genre for each region. At first, I set a standard that the popular genre is the genre which has the highest regional sales. I use "Map", together with "tooltip", to show the "Popular Genre per Region". In addition, I use the circle-area to represent the value of the regional sales and use circle-color to represent the corresponding genre. What's more, I inserted a textbox which shows clearly the region name and the popular genre. If the user want to know more details, he can even move his mouse to the corresponding circle and more information will be extracted. The result showes that the most popular genre in North America, Europe and other regions is Action. The most popular genre in Japan is Role-Playing. 
+        <br>
+        <br>
+        I use "boxplot", together with "tooltip", to present the "Best Publisher per Genre". As a player, I know that there are several standards for the evaluatin of a company (such as "Total Number of Game Selling", "The sum of gobal sales for all the games", "The average sales per game", "The global sales for the most popular game"). Therefore, I provide the choice for the user to see the results based on different standard. There are too many publishers for each genre, therefore I only keep the top "10" publisher based on the standard. In order to see whether a publisher is a little better or much better than its components. I calculate the statistical "Min", "1/4 First quartile", "Median" "3/4 Third quartile" and "Max". These information can help the boss to understand the relative score for the publisher.
+
+        <br>
+        <br>
+        [2] List 3 reasons why D3 was helpful and improved your visualization (6 points)
+        <br>
+        Answer:
+        <br>
+        a) The dynamic plot and interactive tooltip will provide more information about the data than a static plot (such as Originlab and Excel)! They can show more than one images and the user can extract more information from the data.
+        <br>
+        b) The D3 has great flexibility/freedom. Instead of using a template, we can easily combine different elements (such as barplot, circle, pie, etc) and create the best image for visuallization.
+        <br>
+        c) There are a lot of fantastic D3 projects online. I can easily find good samples and improve my own visualizaton process.
+        <br>
+        <br>
+        [3] List 3 reasons why D3 would not be the best tool for creating a visualization (6 points)
+        <br>
+        Answer:
+        <br>
+        [a] Difficult to learn. The coding part for d3 is too tedious. The new user has to spend a lot of time on learning the functions of D3 (even Javascript!). In addition, the browser does not always provide useful information when debuging.
+        <br>
+        [b] Privacy. It is difficult for me to hide my data source in the D3. The user can get information about my data-link or cvs file.
+        <br>
+        [c] Platform. Some old browsers may not be able to handle d3. Since Javascript engine is needed, the environment for the d3 in Mobile Phone, tablet, switch/PS5/XBOX, machines, FPGA, etc. should be considered carefully.
+        <hr>
+        <br>
+        [4]Evaluate the accessibility of your dashboard based on the readings in the “Before you begin” section. What kinds of users might find this dashboard accessible and who might have more difficulty? What additional actions might you take to make this dashboard more accessible to all audiences? Your response should refer to at least one of the readings and be about 1 paragraph.
+        <br>
+        Answer:
+        <br>
+        My dashboard has great accesibility. As introduced by the second article that we should "Label data points directly."), I showed the value of data directly next to the bar which makes it easy to read. In the Graph-2 (Map plot), I marked both the location and the name for each region. In the Graph-3, I showed the best publisher directly on the figure and the user has freedom to get more statistical information about the top 10 publishers. The colorblindness will find the dashboard easy to read, because I use both the length of bar and the area of circle to represent the value of the data. The old people with trembling hands will find the dashboard hard to read, because different data points are too close to each other for the user to hover on. As suggested by the article "A Comprehensive Guide etc.", "Don’t require a user to hover over a graph to see the data output. This is often difficult or impossible to do when using assistive technology. Instead, show the output at all times." The tooltip in Graph 3 is not convenient because of the huge amount of data points. I should avoid mixing a lot of data points together but be focus on the most important information.
+
+
+        <br>
+        <br>
+        [5] Reflect on the stages of your design and implementation process when you could have taken steps to make your dashboard more accessible to all audiences. What are some factors that kept you from taking these steps? (a few sentences)
+        <br>
+        Answer:
+        <br>
+        The complexity of the data kept me away from taking these steps. If I simplify the visualization, it may lead to some misinterpretation of the data. In addition, the need from different users are different. Some good steps will satisfy a group of user, however, disatisfy the other group of users. 
+        <br>
+        <br>
+        <b>Extra point</b>: I draw a boxplot in Graph-03. The plot has dynamic stats calculation. I calculate the minimum, the maximum (as the horizontal lines), the sample median (as the vertical line), and the first and third quartiles (as the box). When the criterion changes, these statistical information will change correspondingly. These values show the distribution of the data, so they are statistical.
+        <br>
+
+    <p>
+    </div>
+    <!--Feel free to add more JavaScript files as needed-->
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="graph01.js"></script>
+    <script type="text/javascript" src="graph02.js"></script>
+    <script type="text/javascript" src="graph03.js"></script>
+
+<!-- Load d3.js -->
+</body>
+</html>
