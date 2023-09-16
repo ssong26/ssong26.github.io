@@ -1,0 +1,87 @@
+/*
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 92%;
+	max-width: 960px;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+*/
+
+.header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.header > h3, h5 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+header .profilePhoto {
+	/*background-color: rgba(237,237,237,1.00);*/
+	clear: both;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+figcaption {
+  text-align: center;
+}
+
+
+.back_color{
+  color:#000!important;
+  background-color:#87CEEB!important;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+
+/* Navigation Bar*/
+
+nav {
+	background-color: #333;
+	overflow: hidden;
+}
+nav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+.active {
+	background-color: #4CAF50;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  height: 20px; /* change the height of hr */
+  width: 50%; /* change the width of hr */
+  background-color: black; /* set the background color of hr */
+  border: none; /* remove any border around hr */
+  margin: 20px auto; /* center hr horizontally and add some space around it */
+}
+
+/* Include any custom CSS styling here! */

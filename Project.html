@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Siyuan Song &laquo; Personal Website&raquo;</title>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="w3.css">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
+
+
+        <style type="text/css">
+
+            button:focus {
+                outline: 0 !important;
+            }
+            svg {
+                display: block;
+                margin: 0 auto;
+                font: 10px sans-serif;
+            }
+            .tooltip {
+                position: absolute;
+                font-size: 12px;
+                min-width: 100px;
+                padding: 10px;
+                width:  auto;
+                height: auto;
+            }
+        </style>
+
+
+</head>
+
+<body class="w3-container">
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="Research.html">Research</a>
+        <a href="Project.html"  class="active">Project</a>
+        <a href="FEA.html">Finite Element Analysis</a>
+		<a href="Download.html">Download</a>
+		<a href="Contact.html">Contact</a>
+	</nav>
+    <br>
+    <br>
+    <div class="back_color">
+    <h3>Influence of Surface Roughness on Acousitc/Fluid/Thermal properties of Micro Channel</h3>
+    </div>
+    <br>
+    <div>
+    <header>
+            <div class="profilePhoto"><img src="Images/surface_roughness.png" alt="surface_roughness" width="800" height="400"></div>
+    </header>
+    </div>
+
+    <p class="w3-large"> 
+        <br>
+        Microfluidic systems find applications in a wide range of fields, including biomedical research, chemical synthesis, and environmental monitoring. The surface roughness of microchannels is crucial for their acoustic, fluidic, and thermal properties. To investigate the effect of surface roughness, we performed first-order perturbation analysis of microchannels with wavy boundaries in both peripheral and longitudinal directions. The change in static fluid resistivity was fitted using logistic regression. We found that the analytical model can effectively describe the fluid field within microchannels with different periodic rough structures. For ideal fluids, the tortuosity can be obtained in a similar way.
+        <br>
+        <br>
+        The model was further applied to study the acoustic properties of porous media. It was observed that surface roughness can shift the adsorption peak to the lower frequency region. Our aim is to utilize roughened porous media as a novel kind of sound adsorption structure.
+        <br>
+        <br>
+        <a href="https://doi.org/10.1088/1361-6463/aa6fa1">[1] Song, S., Yang, X., Xin, F. and Lu, T.J., 2018. Modeling of surface roughness effects on Stokes flow in circular pipes. Physics of Fluids, 30(2), p.023604.</a>
+        
+        <br>
+
+        <a href="https://doi.org/10.1063/1.5067291">[2] Xu, Z., Song, S., Xin, F. and Lu, T.J., 2019. Mathematical modeling of Stokes flow in petal shaped pipes. Physics of Fluids, 31(1), p.013602.</a>
+
+        <br>
+
+        <a href="https://doi.org/10.1063/1.5067291">[3] Song, S.Y., Yang, X.H., Xin, F.X., Ren, S.W. and Lu, T.J., 2017. Modeling of roughness effects on acoustic properties of micro-slits. Journal of Physics D: Applied Physics, 50(23), p.235303.</a>
+
+        <br>
+    </p>
+
+    <div class="back_color">
+    <h3>Multi-Scale Friction Behavior</h3>
+    </div>
+
+    <p  class="w3-large"> 
+
+        The current work provided here is a realization of the interlayer model established by Qunyang Li (2018). It is a multi-scale static friction model. In the nano scale, the spherical contact is described by the Maugis model. In the micro scale, the spherical contact surface is covered buy a uniform distribution of the semi-sphere asperities. 
+
+
+
+
+        <br>
+        <a href="Images/Friction_Fortran/Sphere_test.f">Uinter Subroutine: Fortron</a>
+        <br>
+        <a href="Images/Friction_Fortran/Sphere_test.inp">Spherical Contact: Abaqus Input</a>
+    </p>
+
+    <div class="back_color">
+    <h3>Inverse Problem of Plate Impact Experiment</h3>
+    </div>
+
+    <div>
+    <header>
+            <div class="profilePhoto"><img src="Images/inverse_problem.png" alt="inverse_problem" width="800" height="400"></div>
+    </header>
+    </div>
+
+    <p  class="w3-large"> 
+        Material response at front face of target rear plate in Pressure-Shear Plate Impact (PSPI) experiments has been determined directly from measured velocity-time profiles at traction-free rear face of the target plate. Conceptual advance is the recognition that the usual forward problem for a mixed initial and boundary value problem can be reformulated as an initial value problem by a change of independent variables. For this reformulation the governing system of first-order, hyperbolic partial differential equations have been solved by a second order accurate characteristics method. While applications have been made to PSPI experiments, the approach applies equally well to the more common case of normal impact. The new methodology requires an accurate constitutive model for the rear plate of the target assembly. With such a model, the inverse problem approach provides a convenient means for extending PSPI experiments into higher impact regimes where the rear plate is no longer the hard, elastic material that was envisioned in earlier PSPI experiments. Results are presented for cases where the sandwiching plates are made of tungsten carbide.
+        <br>
+        <br>
+    <a href="https://doi.org/10.1063/12.0000789">[1] Clifton, R.J., Song, S. and Jiao, T., 2020, November. Inverse problem for PSPI experiments. In AIP Conference Proceedings (Vol. 2272, No. 1, p. 070008). AIP Publishing LLC.</a>
+    </p>
+    
+    <br>
+
+    <div class="back_color">
+    <h3>Machine Learning for Interferometry</h3>
+    <br>
+    </div>
+
+    <div>
+    <header>
+            <div class="profilePhoto"><img src="Images/interferometry.png" alt="Interferometry" width="800" height="400"></div>
+    </header>
+    </div>
+
+    <p class="w3-large">
+        Michelson interferometer is widely used in modern technology. The interference pattern can give us information about the wavelength of light. Since the data from the experiments is usually a photo, image analysis is very important. The post-processing of the Michelson interferometer data includes two steps, extract the physical parameters from the pattern; generate the interference pattern based on the given input. In fact, there are some physical phenomena too complicated for people to understand. The machine learning approach provides a physical way for us to describe the world.
+        In the current work, we try to apply CNN in extracting the physical parameters from the images. In addition, we want to apply the dcGAN in generating the interference pattern.
+        <br>
+        <a href="Images/ML_Project_Final.pdf">ML_Project_Final.pdf</a>
+    </p>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
