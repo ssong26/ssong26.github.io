@@ -20,6 +20,8 @@ body {
     text-align: center;
 }
 
+
+
 header .profilePhoto {
 	/*background-color: rgba(237,237,237,1.00);*/
 	clear: both;
@@ -85,3 +87,18 @@ hr {
 }
 
 /* Include any custom CSS styling here! */
+<style>
+.image-container {
+    display: flex; /* 使用 flex 布局 */
+}
+
+.profilePhoto {
+    margin-right: 10px; /* 图像之间的右边距，可根据需要调整 */
+}
+
+.profilePhoto img {
+    max-width: 100%; /* 图像宽度不超过容器宽度 */
+    height: auto; /* 保持图像纵横比 */
+}
+</style>
+
