@@ -29,6 +29,67 @@
             width:  auto;
             height: auto;
         }
+
+        .card-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border: 1px solid #ddd;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-family: sans-serif;
+    }
+
+    .card-text {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .category {
+      font-size: 0.8rem;
+      color: gray;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .headline {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .body-text {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .card-image {
+      flex-shrink: 0;
+      width: 300px;
+      text-align: right;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+    }
+
+    .credit {
+      font-size: 0.8rem;
+      color: gray;
+      margin-top: 4px;
+      font-style: italic;
+    }
+    .card-container {
+  margin-bottom: 30px; /* 控制两个 card 之间的距离 */
+  margin-top: 30px;
+}
+
+
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -36,9 +97,15 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Georgia', serif;
         }
-        p, li, nav, a {
+        nav{
             font-family: 'Inter', sans-serif;
-            font-size: 18px;
+            font-size: 12px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        p, li, a {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
             line-height: 1.6;
             text-align: justify;
         }
@@ -53,9 +120,8 @@
 	<nav>
 		<a href="index.html" class="active">Home</a>
 		<a href="Research.html">Research</a>
-        <a href="Project.html">Project</a>
-        <a href="FEA.html">Finite Element Analysis</a>
-        <a href="Download.html">Download</a>
+        <a href="FEA.html">Resource</a>
+        <a href="Life.html">Life</a>
     </nav>
     <br>
     <div>	
@@ -129,54 +195,100 @@
 
   <br>
 
-
   <h2 style="font-weight: bold;">News</h2>
 
-  <ul style="line-height: 1.8; font-size: 18px;">
 
-        <li>
-          2025-05 Our work 
-          <a href="#" style="color: #0e76a8;">
+  <div id="card-list"></div>
+    <!-- 🔧 卡片模板 -->
+  <template id="card-template">
+    <div class="card-container">
+      <div class="card-text">
+        <div class="category"></div>
+        <div class="headline"></div>
+        <div class="body-text"></div>
+      </div>
+      <div class="card-image">
+        <img src="" alt="Image">
+        <div class="credit"></div>
+      </div>
+    </div>
+  </template>
+
+    <!-- 🧠 JS 插入多个卡片 -->
+  <script>
+    const cards = [
+  {
+    category: "Conference | 2025-05",
+    headline: `Our work 
+          <a style="color: #0e76a8;">
             External Stress Effect on Nucleation and Propagation of Lithium Dendrite in LLZTO
           </a> 
-          has been presented at the ISE (Initiative for Sustainable Energy) Conference.
-        </li>
-
-        <li>
-        2025-04 Our Paper: 
-        <a href="https://pubs.acs.org/doi/abs/10.1021/acsaem.4c03143" style="color: #0e76a8;" target="_blank">
-          Investigation of the Mechanical Properties of Porous Argyrodite Sulfide Electrolytes for All-Solid-State Batteries
+          has been presented at the ISE (Initiative for Sustainable Energy) Symposium.`,
+    body: "May 7, 2025. Brown University, Providence, RI, US.",
+    image: "Images/Interface.png",
+    credit: "A SEM Image of the LLZTO/Li Interface @ Siyuan Song"
+  },
+  {
+    category: "Paper | 2025-04",
+    headline: `Our Paper: 
+      <a href="https://pubs.acs.org/doi/abs/10.1021/acsaem.4c03143" 
+         style="color: #0e76a8;" target="_blank">
+         Investigation of the Mechanical Properties of Porous Argyrodite Sulfide Electrolytes for All-Solid-State Batteries
       </a> 
-      has been published in <em>ACS Applied Energy Materials</em>.
-        </li>
-
-        <li>
-        2024-09 Our Paper: 
+      has been published in <em>ACS Applied Energy Materials</em>.`,
+    body: "A Macroscopic Characterization of the Mechanical Properties of Sulfide Electrolytes。",
+    image: "Images/News-Image/Sulfide-Intro.png",
+    credit: "Table of Contents @ Siyuan Song"
+  },
+  {
+    category: "Paper | 2024-09",
+    headline: `Our Paper: 
         <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022509624001820" style="color: #0e76a8;" target="_blank">
-          On inherent hyperelastic crease
+          On Inherent Hyperelastic Crease
       </a> 
-      has been published in <em>Journal of the Mechanics and Physics of Solids</em>.
-        </li>
-
-        <li>
-        2024-06 Our Paper: 
+      has been published in <em>Journal of the Mechanics and Physics of Solids</em>.`,
+    body: "Singular Perturbation and Finite Element Analysis of Crease Instability",
+    image: "Images/Crease_Work/subsurface_dislocation.png",
+    credit: "Subsurface Dislocation @ Siyuan Song"
+  },
+  {
+    category: "Paper | 2024-06",
+    headline: `Our Paper: 
         <a href="https://pubs.rsc.org/en/content/articlelanding/2024/sm/d4sm00001c/unauth" style="color: #0e76a8;" target="_blank">
-          Identifying constitutive parameters for complex hyperelastic materials using physics-informed neural networks
+          Identifying Constitutive Parameters for Complex Hyperelastic Materials Using Physics-Informed Neural Networks
       </a> 
-      has been published in <em>Soft Matter/em>.
-        </li>
-
-        <li>
-        2024-05 Our Paper: 
+      has been published in <em>Soft Matter</em>.`,
+    body: "Application of the PINNs to the material characterization",
+    image: "Images/PINNS-1/2022-01-24-Deepxde-2.png",
+    credit: "Cover Page @ Siyuan Song"
+  },
+  {
+    category: "Paper | 2024-05",
+    headline: `Our Paper: 
         <a href="https://iopscience.iop.org/article/10.1209/0295-5075/ad3e27/meta" style="color: #0e76a8;" target="_blank">
           Photoacoustic effect from an oscillating source in a one-dimensional resonator
       </a> 
-      has been published in <em>Europhysics Letters</em>.
-        </li>
-</ul>
+      has been published in <em>Europhysics Letters</em>.`,
+    body: " Mathematical Modeling of the Surface.",
+    image: "Images/News-Image/EPL.png",
+    credit: "Time domain pressure for an oscillating Gaussian source in a one-dimensional resonator. @ Siyuan Song"
+  }
+];
 
 
+    const container = document.getElementById("card-list");
+    const template = document.getElementById("card-template");
 
+    cards.forEach(data => {
+      const clone = template.content.cloneNode(true);
+      clone.querySelector(".category").textContent = data.category;
+      clone.querySelector(".headline").innerHTML = data.headline;
+      clone.querySelector(".body-text").textContent = data.body;
+      clone.querySelector("img").src = data.image;
+      clone.querySelector(".credit").textContent = data.credit;
+      container.appendChild(clone);
+    });
+  </script>
 
 
 
