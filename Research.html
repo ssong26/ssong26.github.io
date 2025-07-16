@@ -1,160 +1,123 @@
 <!DOCTYPE html>
-
-<html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Siyuan Song &laquo; Personal Website&raquo;</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css"/>
         <link rel="stylesheet" href="w3.css">
         <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
         <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
+  <title>Research</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f9f9f9;
+    }
 
+    h1 {
+      text-align: center;
+      padding-top: 40px;
+      font-size: 32px;
+      color: #333;
+    }
 
-        <style type="text/css">
+    .research-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-            button:focus {
-                outline: 0 !important;
-            }
-            svg {
-                display: block;
-                margin: 0 auto;
-                font: 10px sans-serif;
-            }
-            .tooltip {
-                position: absolute;
-                font-size: 12px;
-                min-width: 100px;
-                padding: 10px;
-                width:  auto;
-                height: auto;
-            }
-        </style>
+    .research-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
 
+    .research-card:hover {
+      transform: translateY(-3px);
+    }
 
+    .research-card img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .research-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .research-info h3 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      color: #222;
+    }
+
+    .research-info p {
+      margin: 0;
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .research-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 400px;  /* 可根据需要调整 */
+}
+  </style>
 </head>
+<body   class="w3-container">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Research.html" class="active">Research</a>
+        <a href="FEA.html">Resource</a>
+        <a href="Download.html">Life</a>
+    </nav>
+<hr>
+  <h1>🔬 My Research Projects</h1>
 
-<body class="w3-container">
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="Research.html" class="active">Research</a>
-        <a href="Project.html">Project</a>
-        <a href="FEA.html">Finite Element Analysis</a>
-		<a href="Download.html">Download</a>
-		<a href="Contact.html">Contact</a>
-	</nav>
-    <br>
-    <br>
-    <div class="back_color">
-    <h3>Crease Singularity</h3>
-    </div>
-    <div>
-    <header>
-            <div class="profilePhoto"><img src="Images/Crease_Work/Graph_Crinkle.png" alt="Graph_Crinkle" width="900" height="250"></div>
-    </header>
-    </div>
-    <br>
-    <br>
-    <div>
-    <p class="w3-large"> 
-        The configurational change of the material, such as the crack tip's propagation or the dislocation's motion, usually leads to a variation in the total energy. The change rate of the system potential is described either by the energy release rate or the energetic/configurational force. The ruga pattern, such as wrinkles, creases, or ridges, is a deformation mode of the material surface. The configurational force controls their positions and phases.
-    </p>
-    <p class="w3-large"> 
-        The crease pattern is a localized deformation mode with significant deformation nonlinearity near the crease tip. Like the Peach-Koehler force acting on the dislocation, the crease is exerted by the thermodynamic driving force provided by the external compression stress and the image stress field of boundaries. Regardless of how the crease core is introduced, e.g., via the point force or the geometry defect, its growth is governed by the configurational force.
-    </p>
-        <br>
-            <header>
-            <div class="profilePhoto"><img src="Images/Crease_Work/eq_equilibrium.png" alt="eq_equilibrium" width="280" height="40"></div>
-            </header>
-        <br>
+  <div class="research-section">
+    <div class="research-card">
+      <img src="Images/News-Image/Interface2.png" alt="Dendrite Project">
+      <div class="research-info">
+        <h3>📘 Controlling Dendrite Growth in LLZTO</h3>
+        <p>Exploring the role of external stress in nucleating and guiding lithium dendrites within garnet-type solid electrolytes.</p>
+      </div>
     </div>
 
-    <div class = "video-container">
-    <video width="800" height="600" controls>
-        <source src="video/distance_5.mp4" type="video/mp4">
-    </video> 
-    </div>
-    <br>
-    <br>
-        <div class="back_color">
-    <h3>Identifying Constitutive Parameters for Complex Hyperelastic Solids using PINNs</h3>
-    </div>
-    <br>
-    <table><tr>
-            <td><img src="Images/PINNS-1/Figure-1.png" alt="Figure-1" width="500" height="500"></td>
-            <td><img src="Images/PINNS-1/Figure-4.png" alt="Figure-4" width="500" height="500"></td>
-    </tr></table>
-    <br>
 
-    <p  class="w3-large"> 
-        Identifying constitutive parameters in engineering and biological materials, particularly those with intricate geometries and mechanical behaviors, remains a longstanding challenge. The recent advent of Physics-Informed Neural Networks (PINNs) offers promising solutions, but current frameworks are often limited to basic constitutive laws and encounter practical constraints when combined with experimental data. In this paper, we introduce a new PINN-based framework designed to identify material parameters for soft materials, specifically those exhibiting complex constitutive behaviors, under large deformation in plane stress conditions. Distinctively, our model emphasizes training PINNs with multi-modal time-dependent experimental datasets consisting of full-field deformation and loading history, ensuring algorithm robustness even amidst noisy data. Our results reveal that our framework can accurately identify constitutive parameters of the incompressible Arruda-Boyce model for samples with intricate geometries, maintaining an error below 5\%, even with an experimental noise level of 5\%. We believe our framework sets the stage for a transformative approach in modulus identification for complex solids, especially for those with geometrical and constitutive intricate.
-    </p>
-    <br>
-    <br>
-    <div class="back_color">
-    <h3>Orientation Localization of the Superlattice Composed of Host-Patch Nanoparticles</h3>
+    <div class="research-card">
+      <img src="Images/PINNS-1/Figure4_Crop.png" alt="Dendrite Project">
+      <div class="research-info">
+        <h3>📘 Identifying Constitutive Parameters for Complex Hyperelastic Solids using PINNs</h3>
+        <p>In this paper, we introduce a new PINN-based framework designed to identify material parameters for soft materials, specifically those exhibiting complex constitutive behaviors, under large deformation in plane stress conditions. Distinctively, our model emphasizes training PINNs with multi-modal time-dependent experimental datasets consisting of full-field deformation and loading history, ensuring algorithm robustness even amidst noisy data. Our results reveal that our framework can accurately identify constitutive parameters of the incompressible Arruda-Boyce model for samples with intricate geometries, maintaining an error below 5\%, even with an experimental noise level of 5\%.</p>
+      </div>
     </div>
 
-    <div>
-    <header>
-            <div class="profilePhoto"><img src="Images/Orientation/Intro_QD.png" alt="Intro_QD" width="1000" height="370"></div>
-    </header>
+
+
+    <div class="research-card">
+<video class="research-video" controls>
+  <source src="video/distance_5.mp4" type="video/mp4">
+</video>
+      <div class="research-info">
+        <h3>🌀 Crease Instability</h3>
+        <p>  The crease pattern is a localized deformation mode with significant deformation nonlinearity near the crease tip. Like the Peach-Koehler force acting on the dislocation, the crease is exerted by the thermodynamic driving force provided by the external compression stress and the image stress field of boundaries. Regardless of how the crease core is introduced, e.g., via the point force or the geometry defect, its growth is governed by the configurational force.</p>
+      </div>
     </div>
-
-    <p  class="w3-large"> 
-        The superlattice with orientational order has unique electromeganetic properties. The quantum dots decorated with semi-sphere gold patches can adjust its position in the well ordered superlattice.
-        <br>
-        <br>
-        The host-patch structure is described with two non-dimensionalized parameters L/R_core and R_patch/R_core. Within the parameter space, the superlattice can have either orientation order, non-orientation order or translational breaking. In the current work, we characterize the geometry compatability between neighboring particles based on the topological model. A theoretical model based on both the necessary condition and the theoretical condition is proposed.
-        <br>
-        <br>
-        The dynamic instability of the superlattice is characterized by the phonon dispersion relationship.
-
-    </p>
-
-    <div class="back_color">
-    <h3>Guided Alignment of the ssDNA along the nonuniform crinkle</h3>
-    </div>
-
-    <div>
-    <header>
-            <div class="profilePhoto"><img src="Images/DNA/Alignment_Exp.png" alt="Alignment_Exp" width="1110" height="340"></div>
-    </header>
-    </div>
-
-    <p  class="w3-large"> 
-        Our research presents findings on the linear alignment of single-strand DNA (ssDNA) with flexoelectric crinkles. Through molecular dynamic simulations of the curved ssDNA partially attached to the crinkles, it was determined that the adsorption rate is proportional to the crinkle strength. The non-uniform crinkles, which generate a potential gradient along their direction, were found to effectively guide the translocation of ssDNA. The higher crinkle strength gradient was also found to minimize the backsliding of the ssDNA during translocation. To create a substrate with these non-uniform crinkles, the authors designed a silicon wafer with an hourglass-shaped hole and transferred a CVD-MLG onto its surface. The deformation state of the CVD-MLG was then measured using Atomic Force Microscopy (AFM).
-    </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 </body>
 </html>
