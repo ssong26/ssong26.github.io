@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
-<html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Siyuan Song &laquo; Personal Website&raquo;</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <title>Siyuan Song &laquo; Personal Website&raquo;</title>
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css"/>
         <link rel="stylesheet" href="w3.css">
@@ -14,9 +11,8 @@
         <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
 
 
-        <style type="text/css">
-
-            button:focus {
+  <style>
+    button:focus {
                 outline: 0 !important;
             }
             svg {
@@ -32,122 +28,119 @@
                 width:  auto;
                 height: auto;
             }
-        </style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 0;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
 
+    h1, h2, h3 {
+      color: #2a4d69;
+    }
 
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      margin-top: 2em;
+      font-size: 1.6em;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3em;
+    }
+
+    h3 {
+      margin-top: 1.5em;
+      font-size: 1.3em;
+    }
+
+    ul {
+      padding-left: 1.4em;
+    }
+
+    ul li {
+      margin-bottom: 0.6em;
+    }
+
+    a {
+      color: #0e76a8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section-block {
+      background: #f9f9ff;
+      border: 1px solid #ddd;
+      padding: 20px 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .section-block ul {
+      margin-top: 0.5em;
+    }
+  </style>
 </head>
 
-<body class="w3-container">
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="Research.html">Research</a>
-        <a href="Project.html">Project</a>
-        <a href="FEA.html" class="active">Finite Element Analysis</a>
-		<a href="Download.html">Download</a>
-		<a href="Contact.html">Contact</a>
-	</nav>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Research.html">Research</a>
+        <a href="FEA.html" class="active">Resource</a>
+        <a href="Life.html">Life</a>
+    </nav>
     <br>
     <br>
-    <div>
-    <h1> Finite Element Analysis (Updating) </h1>
-    <br>
-    </div>
-    <br>
+  <h1>📖 Finite Element Method</h1>
+  <p>
+    Welcome! This section serves as a personal knowledge hub 🔧 for the theoretical foundation of the Finite Element Method (FEM). Whether you're refreshing the basics or diving deep into variational mechanics, here you'll find hand-picked notes, examples, and insights.
+  </p>
 
-    <p class="w3-large"> 
-        <h2> FEA Theory </h2>
-        <h3><a href="https://github.com/ssong26/LectureNotes/blob/bb4b0da1c6d8d422aeb10e318bb2b2a8410287b9/Finite_Element_Method/FEA-L1-English.pdf" style="color: blue">Lecture-1: Mathematical Notation</a></h3>
+  <div class="section-block">
+    <h2>🎓 Lecture Series</h2>
+    <ul>
+      <li>📘 <a href="https://github.com/ssong26/LectureNotes/blob/bb4b0da1c6d8d422aeb10e318bb2b2a8410287b9/Finite_Element_Method/FEA-L1-English.pdf" target="_blank">Lecture 1: Mathematical Notation</a></li>
+      <li>📘 Lecture 2: Variational Principles and Weak Formulation</li>
+      <li>📘 Lecture 3: Galerkin Method and Ritz Approximation</li>
+      <li>📘 Lecture 4: Shape Functions and Element Discretization</li>
+      <li>📘 Lecture 5: Interpolation Schemes and Gauss Integration Points</li>
+      <li>📘 Lecture 6: Element Stiffness Matrix and Residual Evaluation</li>
+      <li>🛠️ Lecture 7: Shear Locking – Causes and Remedies</li>
+      <li>🛠️ Lecture 8: Volumetric Locking and Its Mitigation</li>
+    </ul>
+  </div>
 
-        <h3> Lecture-: Variational Analysis</h3>
-        <h3> Lecture-: Galerkin Method and Ritz Method</h3>
-        <h3> Lecture-: Shape Function</h3>
-        <h3> Lecture-: Interpolation and Integration Point</h3>
-        <h3> Lecture-: Stiffness Matrix and Residue</h3>
-        <h3> Lecture-: Shear Locking</h3>
-        <h3> Lecture-: Volumetric Locking</h3>
-        <h3> Lecture-: </h3>
+  <div class="section-block">
+    <h2>🧪 Example Cases</h2>
+    <ul>
+      <li>🔍 Example 1: B-Bar for Volumetric Locking</li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/e906d4e93f7dd8ca379532ada010ee8b14083242/Wave_Porous" >Example 2: FEA for Wave Propagation in Porous Media (Matlab)</a> </li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/e906d4e93f7dd8ca379532ada010ee8b14083242/Uinter_Dugdale" >Example 3: Uinter for Dugdale Model (Abaqus and Fortran)</a> </li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/main/Motz_and_Lshape" >Example 4: FEA for Motz problem and Poisson Equation in L-shape  (Matlab)</a> </li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/main/HelmothozCylin1D" >Example 5: FEA for 1D cylindrical Helmothoz Equation (Python)</a></li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/main/hw10_UEL_2DBeam_Element" >Example 6: UEL for 2D Continuum Beam Element (Fortran)</a> </li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/main/HW9-Vumat-McCormick" >Example 7: Vumat for McCormick ( Abaqus and Fortran)</a> </li>
+      <li>🔍 <a href="https://github.com/ssong26/FEA_Sharing/tree/main/hw4_FEA_Mathematica" >Example 8: Mathematica for Central Hole (Mathematica)</a>  </li>
+    </ul>
+  </div>
 
-        <h3> Example-: Volumetic Locking: B-Bar Method </h3>
-        <h3> Example-: : B-Bar Method </h3>
+  <div class="section-block">
+    <h2>📚 Supplemental Topics</h2>
+    <ul>
+      <li>📐 Sup 1: <a href = "https://github.com/ssong26/CS1470-Final-Project" > CNN and Michelson Interferometer </a></li>
+      <li>🎯 Sup 2: <a href = "https://github.com/ssong26/DeepModulus" > PINNs and Elastic Modulus Identification </a></li>
+    </ul>
+  </div>
 
-        <h3> Sup-1: Finite Difference Method</h3>
-        <h3> Sup-2: Guassian Integration</h3>
-        <h3> Sup-3: Interpolation</h3>
-        <hr size = '9'> 
-        <h2> Finite Element Code </h2>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/e906d4e93f7dd8ca379532ada010ee8b14083242/Wave_Porous"  style="color: blue;">FEA-1: FEA for Wave Propagation in Porous Media (Matlab)</a> </h3>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/e906d4e93f7dd8ca379532ada010ee8b14083242/Uinter_Dugdale"  style="color: blue;">FEA-2: Uinter for Dugdale Model (Abaqus and Fortran)</a> </h3>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/main/Motz_and_Lshape"  style="color: blue;">FEA-3: FEA for Motz problem and Poisson Equation in L-shape  (Matlab)</a> </h3>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/main/HelmothozCylin1D"  style="color: blue;">FEA-4: FEA for 1D cylindrical Helmothoz Equation (Python)</a> </h3>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/main/hw10_UEL_2DBeam_Element"  style="color: blue;">FEA-5: UEL for 2D Continuum Beam Element (Fortran)</a> </h3>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/main/HW9-Vumat-McCormick"  style="color: blue;">FEA-6: Vumat for McCormick ( Abaqus and Fortran)</a> </h3>
-        <h3> <a href="https://github.com/ssong26/FEA_Sharing/tree/main/hw4_FEA_Mathematica"  style="color: blue;">FEA-7: Mathematica for Central Hole (Mathematica)</a> </h3>
-        
-        <p>
-            
-
-        </p>
-        <hr>
-        <h2> Discontinous Galekin Method </h2>
-        <hr>
-        <h2> Abaqus and Machine Learning </h2>
-        <h3> <a href = "https://github.com/ssong26/CS1470-Final-Project" style="color: blue"> Example-1: CNN and Michelson Interferometer </a></h3>
-        <h3> <a href = "https://github.com/ssong26/DeepModulus" style="color: blue;"> Example-2: PINNs and Elastic Modulus Identification </a> </h3>
-        <h3> Example-3: PINNs and Acoustic Source Identification</h3>
-        <h3> Example-4: Attention and Structural Optimization</h3>
-        <h3> Example-5: SNN and Partial Differential Equations</h3>
-
-        <hr>
-        <h2> Lecture: Mechanics of Solid </h2>
-        <h4>
-        The current lecture notes have been summarized by Siyuan Song. Please feel free to use them for self-study. For teaching purposes, publication, or any other commercial applications, please contact songsiyuanxjtu@gmail.com.
-        Thank you. </h4>
-        <br>
-        <a href="https://github.com/ssong26/LectureNotes/blob/dd43161a79acc2b4a26c60144b30d90e1cdb0d51/Mechanics_of_Solid/Lecture-1-Vector.pdf"  style="color: blue;font-size:20px">Lecture-1: Vector</a>
-        <br>
-        <a href="https://github.com/ssong26/LectureNotes/blob/b906d56361509571ebaebc7ff055e9672d1619c1/Mechanics_of_Solid/Lecture-2%20Tensor.pdf"  style="color: blue;font-size:20px">Lecture-2: Tensor</a>
-        <br>
-        <a href="https://github.com/ssong26/LectureNotes/blob/d296f07543bf3d1b3b2f805a8465f173bda6bd23/Mechanics_of_Solid/Contact%20Mechanics.pdf"  style="color: blue;font-size:20px">Lecture-: Contact Mechanics</a>
-        <br>    
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-    </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <p>🧠 More coming soon... Stay curious, stay sharp!</p>
 </body>
 </html>
