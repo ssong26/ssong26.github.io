@@ -290,6 +290,21 @@
     });
   </script>
 
+<span id="busuanzi_value_site_pv" style="display:none"></span>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  // 等待 busuanzi 加载后，打印访问次数
+  document.addEventListener("DOMContentLoaded", function () {
+    var timer = setInterval(function () {
+      var pv = document.getElementById("busuanzi_value_site_pv");
+      if (pv && pv.innerText !== '') {
+        console.log("本站访问次数：", pv.innerText);
+        clearInterval(timer);
+      }
+    }, 500);
+  });
+</script>
+
 
 
 
@@ -301,6 +316,7 @@
 </body>
 
 </html> 
+
 
 
 
