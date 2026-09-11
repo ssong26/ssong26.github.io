@@ -6,35 +6,35 @@ const cards = [
     headline: `Siyuan Song will attend SES 2026, serve as a session chair, and present “Stress-Controlled Dendrite Evolution in Solid Electrolytes.”`,
     body: "October 11–14, 2026 — Purdue University, West Lafayette, Indiana, USA. Session 7.2: Physics-Informed and Data-Driven Approaches to Coupled Multiphysics.",
     image: "Images/2026_SEStemp.png",
-    credit: ""
+    credit: "SES2026 Official Website."
   },
   {
     category: "Poster | 2026-05",
     headline: `Siyuan Song presented “Stress-Controlled Dendrite Evolution in Solid Electrolytes” at the Initiative for Sustainable Energy Mini-Symposium.`,
     body: "May 8, 2026 — Brown University, Providence, Rhode Island, USA.",
     image: "Images/202605_ISE.jpg",
-    credit: ""
+    credit: "Poster presentation given by Siyuan Song"
   },
   {
     category: "Paper | 2026-01",
     headline: `Our paper, <a href="https://doi.org/10.1088/1361-6463/ae3623" style="color: #0e76a8;" target="_blank">All-optical photoacoustic tomography via beam deflection</a>, was published in <em>Journal of Physics D: Applied Physics</em>.`,
     body: "Xingchi Yan and Siyuan Song contributed equally as co-first authors, in collaboration with Hanxun Jin. The study introduces an all-optical approach to reconstructing three-dimensional photoacoustic sources from laser-beam deflection measurements.",
     image: "Images/2026_JPD.png",
-    credit: ""
+    credit: "The schematic of the PA setup"
   },
   {
     category: "Paper | 2025-12",
     headline: `Our paper, <a href="https://doi.org/10.1016/j.joule.2025.102232" style="color: #0e76a8;" target="_blank">Dendrite suppression in garnet electrolytes via thermally induced compressive stress</a>, was published online in <em>Joule</em>.`,
     body: "The study demonstrates how temperature-induced compression suppresses lithium dendrite penetration in garnet solid electrolytes and improves charging performance. Published online in December 2025; included in the 2026 journal volume.",
     image: "Images/2026_Joule.png",
-    credit: ""
+    credit: "The schematic of the temperature gradient driven dendrite control"
   },
   {
     category: "Conference | 2025-10",
     headline: `Siyuan Song presented “Regulating the Nucleation and Propagation of Lithium Dendrite in LLZTO via External Stress” at the Society of Engineering Science Annual Technical Meeting.`,
     body: "October 12–15, 2025 — Hilton Atlanta, Atlanta, Georgia, USA.",
     image: "Images/202510_SES.png",
-    credit: ""
+    credit: "Cover page of the presentation"
   },
   {
     category: "Conference | 2025-05",
