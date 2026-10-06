@@ -3,133 +3,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Siyuan Song &laquo; Personal Website&raquo;</title>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <title>Home | Siyuan Song</title>
     <link rel="stylesheet" href="main.css"/>
-    <link rel="stylesheet" href="w3.css">
-    <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-    <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Georgia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style type="text/css">
-
-        button:focus {
-            outline: 0 !important;
-        }
-        svg {
-            display: block;
-            margin: 0 auto;
-            font: 10px sans-serif;
-        }
-        .tooltip {
-            position: absolute;
-            font-size: 12px;
-            min-width: 100px;
-            padding: 10px;
-            width:  auto;
-            height: auto;
-        }
-
-        .card-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border: 1px solid #ddd;
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      font-family: sans-serif;
-    }
-
-    .card-text {
-      flex: 1;
-      padding-right: 20px;
-    }
-
-    .category {
-      font-size: 0.8rem;
-      color: gray;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .headline {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .body-text {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .card-image {
-      flex-shrink: 0;
-      width: 300px;
-      text-align: right;
-    }
-
-    .card-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 2px;
-    }
-
-    .credit {
-      font-size: 0.8rem;
-      color: gray;
-      margin-top: 4px;
-      font-style: italic;
-    }
-    .card-container {
-  margin-bottom: 30px; /* 控制两个 card 之间的距离 */
-  margin-top: 30px;
-}
-
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Georgia', serif;
-        }
-        nav{
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            line-height: 1.6;
-            text-align: justify;
-        }
-        p, li, a {
-            font-family: 'Inter', sans-serif;
-            font-size: 17px;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-    </style>
-
 
 </head>
 
-<body  class="w3-container">
-	
-	<nav>
-		<a href="index.html" class="active">Home</a>
-		<a href="Research.html">Research</a>
-        <a href="FEA.html">Resource</a>
-        <a href="Life.html">Life</a>
-    </nav>
-    <br>
-    <div>	
+<body class="page-home">
+
+    <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+    <a href="Research.html">Research</a>
+    <a href="FEA.html">Resource</a>
+    <a href="Life.html">Life</a>
+</nav>
+<main class="site-main" id="main-content">
+<div>
         <div>
             <h1> Siyuan Song</h1>
 
             <p>
-                Postdoc @ <a href="https://engineering.brown.edu/" style="color: #0e76a8;"target="_blank"  >Brown</a> |   Bridging mechanics, AI, and materials science.
+                Postdoc @ <a href="https://engineering.brown.edu/" style="color: #0e76a8;" target="_blank"  >Brown</a> |   Bridging mechanics, AI, and materials science.
             </p>
             <hr>
             <br>
@@ -138,57 +32,55 @@
 
         <div>
             <!-- <img src="Images/self-fie.jpg" alt="Portrait of Siyuan Song" style="float: right; margin-left: 30px;"> -->
-			<div>
+            <div>
 
                 <p>
-                  I completed my Ph.D. (2023) in Solid Mechanics at <a href="https://engineering.brown.edu/" style="color: #0e76a8;"target="_blank"  >Brown University</a>, where I was advised by 
-                  <a href="https://vivo.brown.edu/display/kkim1" style="color: #0e76a8;"target="_blank">Dr. Kyung-Suk Kim</a> in the 
-                  <a href="https://www.brown.edu/Departments/Engineering/Labs/Nanomicro/" style="color: #0e76a8;"target="_blank">Nano & Micromechanics Laboratory</a>.
+                  I completed my Ph.D. (2023) in Solid Mechanics at <a href="https://engineering.brown.edu/" style="color: #0e76a8;" target="_blank"  >Brown University</a>, where I was advised by
+                  <a href="https://vivo.brown.edu/display/kkim1" style="color: #0e76a8;" target="_blank">Dr. Kyung-Suk Kim</a> in the
+                  <a href="https://www.brown.edu/Departments/Engineering/Labs/Nanomicro/" style="color: #0e76a8;" target="_blank">Nano & Micromechanics Laboratory</a>.
                   My thesis focused on the application of ruga mechanics to nano-architectures.
               </p>
 
               <p>
-                  I previously received both my B.E. (2015) and M.S. (2017) degrees in Solid Mechanics from 
-                  <a href="https://en.xjtu.edu.cn/" style="color: #0e76a8;"target="_blank">Xi'an Jiaotong University</a>, where I was mentored by 
-                  <a href="https://mlms.nuaa.edu.cn/mlms/8593/list.htm" style="color: #0e76a8;"target="_blank">Dr. Tianjian Lu</a>.
+                  I previously received both my B.E. (2015) and M.S. (2017) degrees in Solid Mechanics from
+                  <a href="https://en.xjtu.edu.cn/" style="color: #0e76a8;" target="_blank">Xi'an Jiaotong University</a>, where I was mentored by
+                  <a href="https://mlms.nuaa.edu.cn/mlms/8593/list.htm" style="color: #0e76a8;" target="_blank">Dr. Tianjian Lu</a>.
               </p>
 
               <p>
-                  Since then, I have been working as a postdoctoral researcher with 
-                  <a href="https://www.brown.edu/Departments/Engineering/Labs/Gudurulab/" style="color: #0e76a8;"target="_blank">Dr. Pradeep Guduru</a>.
+                  Since then, I have been working as a postdoctoral researcher with
+                  <a href="https://www.brown.edu/Departments/Engineering/Labs/Gudurulab/" style="color: #0e76a8;" target="_blank">Dr. Pradeep Guduru</a>.
                   My recent research focuses on the electro-thermo-mechanical behavior of solid-state electrolytes, the application of physics-informed neural networks (PINNs), and ruga-structure-assisted damage mechanisms in soft materials. I enjoy transforming theoretical insights into practical tools, and I am actively seeking opportunities to contribute to applied AI research in engineering.
               </p>
-
-
 
           </div>
       </div>
       <br>
       <div>
 
-        <div style="text-align: center; margin-top: 10px;">
+        <div class="social-links">
           <!-- Email -->
           <a href="mailto:siyuan_song@brown.edu"
-          style="color: #d14836; margin: 0 20px; font-size: 28px;" title="Email">
+          style="color: #d14836;" title="Email">
           <i class="fas fa-envelope"></i></a>
 
             <a href="Images/Resume_Siyuan Songv3.pdf"
                target="_blank"
-               style="color: #0e76a8; margin: 0 20px; font-size: 28px;"
+               style="color: #0e76a8;"
                title="Resume">
               <i class="fas fa-file-alt"></i>
             </a>
 
           <a href="https://scholar.google.com/citations?user=6_ox6uIAAAAJ&hl=en"
-          target="_blank" style="color: #1a0dab; margin: 0 20px; font-size: 28px;" title="Google Scholar">
+          target="_blank" style="color: #1a0dab;" title="Google Scholar">
           <i class="fas fa-graduation-cap"></i></a>
 
           <a href="https://github.com/ssong26/"
-          target="_blank" style="color: black; margin: 0 20px; font-size: 28px;" title="GitHub">
+          target="_blank" style="color: black;" title="GitHub">
           <i class="fab fa-github"></i></a>
 
           <a href="https://www.linkedin.com/in/siyuan-song-97687678/"
-          target="_blank" style="color: #0e76a8; margin: 0 20px; font-size: 28px;" title="LinkedIn">
+          target="_blank" style="color: #0e76a8;" title="LinkedIn">
           <i class="fab fa-linkedin"></i></a>
       </div>
   </div>
@@ -196,7 +88,6 @@
   <br>
 
   <h2 style="font-weight: bold;">News</h2>
-
 
   <div id="card-list"></div>
     <!-- 🔧 卡片模板 -->
@@ -217,8 +108,6 @@
     <!-- 🧠 JS 插入多个卡片 -->
   <script src="news.js"></script>
   <script>
-
-
 
     const container = document.getElementById("card-list");
     const template = document.getElementById("card-template");
@@ -249,26 +138,13 @@
   });
 </script>
 
-
-
-
 </div>
-<footer>
+</main>
+<footer class="site-footer">
+<nav class="footer-nav" aria-label="More pages"><a href="Project.html">Projects</a><a href="Download.html">Downloads</a><a href="Online_Tools.html">Research details</a><a href="Contact.html">Contact</a></nav>
   <hr>
   <p class="footerDisclaimer">2025  Copyrights - <span>All Rights Reserved</span></p>
 </footer>
 </body>
 
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
+</html>

@@ -3,91 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css"/>
-        <link rel="stylesheet" href="w3.css">
-        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-        <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
-  <title>Research</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    h1 {
-      text-align: center;
-      padding-top: 40px;
-      font-size: 32px;
-      color: #333;
-    }
-
-    .research-section {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .research-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease;
-    }
-
-    .research-card:hover {
-      transform: translateY(-3px);
-    }
-
-    .research-card img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-    }
-
-    .research-info {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .research-info h3 {
-      margin: 0 0 10px 0;
-      font-size: 22px;
-      color: #222;
-    }
-
-    .research-info p {
-      margin: 0;
-      font-size: 15px;
-      color: #555;
-      line-height: 1.5;
-    }
-    .research-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  max-height: 400px;  /* 可根据需要调整 */
-}
-  </style>
+  <title>Research | Siyuan Song</title>
 </head>
-<body   class="w3-container">
-<nav>
+<body class="page-research">
+<nav class="site-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
-    <a href="Research.html" class="active">Research</a>
-        <a href="FEA.html">Resource</a>
-        <a href="Download.html">Life</a>
-    </nav>
-<hr>
-  <h1>🔬 My Research Projects</h1>
+    <a href="Research.html" class="active" aria-current="page">Research</a>
+    <a href="FEA.html">Resource</a>
+    <a href="Life.html">Life</a>
+</nav>
+<main class="site-main" id="main-content">
+<h1>🔬 My Research Projects</h1>
 
   <div class="research-section">
     <div class="research-card">
@@ -98,7 +25,6 @@
       </div>
     </div>
 
-
     <div class="research-card">
       <img src="Images/PINNS-1/Figure4_Crop.png" alt="Dendrite Project">
       <div class="research-info">
@@ -106,8 +32,6 @@
         <p>In this paper, we introduce a new PINN-based framework designed to identify material parameters for soft materials, specifically those exhibiting complex constitutive behaviors, under large deformation in plane stress conditions. Distinctively, our model emphasizes training PINNs with multi-modal time-dependent experimental datasets consisting of full-field deformation and loading history, ensuring algorithm robustness even amidst noisy data. Our results reveal that our framework can accurately identify constitutive parameters of the incompressible Arruda-Boyce model for samples with intricate geometries, maintaining an error below 5\%, even with an experimental noise level of 5\%.</p>
       </div>
     </div>
-
-
 
     <div class="research-card">
 <video class="research-video" controls>
@@ -119,5 +43,9 @@
       </div>
     </div>
   </div>
+</main>
+<footer class="site-footer">
+<nav class="footer-nav" aria-label="More pages"><a href="Project.html">Projects</a><a href="Download.html">Downloads</a><a href="Online_Tools.html">Research details</a><a href="Contact.html">Contact</a></nav>
+</footer>
 </body>
 </html>

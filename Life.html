@@ -2,108 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Life</title>
+  <title>Life | Siyuan Song</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css"/>
-        <link rel="stylesheet" href="w3.css">
-        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-        <script type="text/javascript" src="https://d3js.org/d3-array.v2.min.js"></script>
-
-
-
-  <style>
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 40px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 40px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 24px;
-    }
-
-    .photo-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .photo-card:hover {
-      transform: scale(1.02);
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .caption {
-      padding: 16px;
-    }
-
-    .caption h3 {
-      margin: 0 0 8px;
-      color: #2c3e50;
-    }
-
-    .caption p {
-      margin: 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-  #lightbox {
-  position: fixed;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  cursor: zoom-out;
-}
-
-#lightbox .lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-}
-
-#lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-  </style>
 </head>
-<body  class="w3-container">
-    <nav>
+<body class="page-life">
+    <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="Research.html">Research</a>
-        <a href="FEA.html">Resource</a>
-        <a href="Download.html" class="active">Life</a>
-    </nav>
-<hr>
+    <a href="FEA.html">Resource</a>
+    <a href="Life.html" class="active" aria-current="page">Life</a>
+</nav>
+<main class="site-main" id="main-content">
 <h1>📸 Through My Eyes</h1>
 
 <div class="gallery">
@@ -154,8 +64,6 @@
       <p>Times Square, Dec.31.2024, Rainy</p>
     </div>
   </div>
-
-
 
   <div class="photo-card" onclick="openLightbox('Images/Life/20241029_Soccer.jpg')">
     <img src="Images/Life/20241029_Soccer.jpg" alt="Soccer Match">
@@ -216,7 +124,7 @@
 </div>
 
 <script>
-  
+
 function openLightbox(src) {
   const lightbox = document.getElementById('lightbox');
   const img = document.getElementById('lightbox-img');
@@ -231,17 +139,16 @@ function closeLightbox() {
   img.src = '';
 }
 
-
 </script>
-
 
 <div id="lightbox" onclick="closeLightbox()">
   <span class="close">&times;</span>
   <img class="lightbox-img" id="lightbox-img" src="" alt="Enlarged">
 </div>
 
-
-
-
+</main>
+<footer class="site-footer">
+<nav class="footer-nav" aria-label="More pages"><a href="Project.html">Projects</a><a href="Download.html">Downloads</a><a href="Online_Tools.html">Research details</a><a href="Contact.html">Contact</a></nav>
+</footer>
 </body>
 </html>

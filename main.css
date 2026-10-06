@@ -1,104 +1,128 @@
-/*
+/* Shared page geometry and typography. All pages load this stylesheet. */
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: #fafafa;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-y: scroll; }
 body {
-	margin-left: auto;
-	margin-right: auto;
-	width: 92%;
-	max-width: 960px;
-	padding-left: 1%;
-	padding-right: 1%;
-}
-*/
-
-.header {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto;
+  padding: 0 24px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
-.header > h3, h5 {
-    margin: 0;
-    padding-top: 20px;
-    text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.3;
 }
+h1 { margin: 0 0 24px; font-size: 2rem; }
+h2 { margin: 32px 0 16px; font-size: 1.6rem; }
+h3 { margin: 24px 0 12px; font-size: 1.3rem; }
+p { margin: 0 0 16px; }
+ul { padding-left: 24px; }
+li { margin-bottom: 8px; }
+a { color: #0e76a8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid #0e76a8; outline-offset: 4px; }
+hr { height: 0; margin: 24px 0; border: 0; border-top: 1px solid #ddd; }
+img, video { max-width: 100%; height: auto; }
+figure { margin: 0; }
+figcaption { text-align: center; }
 
-
-
-header .profilePhoto {
-	/*background-color: rgba(237,237,237,1.00);*/
-	clear: both;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  background: #333;
 }
-
-figcaption {
+.site-nav a {
+  display: block;
+  padding: 14px 20px;
+  color: #f2f2f2;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
+  text-decoration: none;
 }
+.site-nav a:hover, .site-nav a:focus-visible { background: #ddd; color: #111; }
+.site-nav a.active { background: #4caf50; color: #fff; }
+.site-main { padding: 32px 0; }
+.site-footer { border-top: 1px solid #ddd; padding: 24px 0; }
+.site-footer > hr { display: none; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 16px; }
+.footerDisclaimer { color: #666; font-size: .875rem; }
 
-
-.back_color{
-  color:#000!important;
-  background-color:#87CEEB!important;
-  height: 40px;
+/* Home: news cards and contact links. */
+.social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 32px; margin-top: 10px; }
+.social-links a { font-size: 28px; }
+.card-container {
   display: flex;
-  align-items: center;
-  padding-left: 50px;
+  align-items: flex-start;
+  gap: 24px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 20px;
+  margin: 24px 0;
+}
+.card-text { flex: 1; min-width: 0; }
+.category { font-size: .8rem; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.headline { font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
+.body-text { color: #555; }
+.card-image { flex: 0 1 300px; min-width: 0; }
+.card-image img { display: block; width: 100%; border-radius: 2px; }
+.credit { font-size: .8rem; color: #666; margin-top: 4px; font-style: italic; }
+
+/* Research and resource cards use the same available content width. */
+.research-section { display: grid; gap: 30px; }
+.research-card, .photo-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+  overflow: hidden;
+  min-width: 0;
+}
+.research-card img, .research-video { display: block; width: 100%; max-height: 400px; object-fit: contain; }
+.research-info { padding: 20px; }
+.research-info h3 { margin: 0 0 10px; }
+.research-info p { margin: 0; color: #555; }
+.section-block { background: #f9f9ff; border: 1px solid #ddd; padding: 20px 24px; border-radius: 10px; margin-bottom: 30px; }
+.section-block h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 2px solid #ddd; }
+
+/* Life gallery and full-screen viewer. */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 24px; }
+.photo-card img { display: block; width: 100%; }
+.caption { padding: 16px; }
+.caption h3 { margin: 0 0 8px; color: #2c3e50; }
+.caption p { margin: 0; font-size: .875rem; color: #555; }
+#lightbox { position: fixed; display: none; justify-content: center; align-items: center; z-index: 9999; inset: 0; background: rgba(0, 0, 0, .8); cursor: zoom-out; }
+#lightbox .lightbox-img { max-width: 90%; max-height: 90%; object-fit: contain; box-shadow: 0 0 20px rgba(255, 255, 255, .4); border-radius: 8px; }
+#lightbox .close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 36px; font-weight: bold; cursor: pointer; }
+
+/* Earlier detail pages retain their content with responsive section headings. */
+.profilePhoto, .video-container { display: flex; justify-content: center; }
+.profilePhoto img { display: block; object-fit: contain; }
+.image-row { display: flex; flex-wrap: wrap; gap: 16px; }
+.back_color, .w3-panel { padding: 16px 20px; margin: 24px 0; background: #87ceeb; color: #111; }
+.back_color h3, .w3-panel h3 { margin: 0; }
+.w3-large { font-size: 1rem; }
+
+@media (max-width: 640px) {
+  body { padding: 0 16px; }
+  .site-nav a { flex: 1; padding: 12px 8px; font-size: .9375rem; }
+  .site-main { padding: 24px 0; }
+  h1 { font-size: 1.75rem; }
+  .card-container { flex-direction: column; padding: 16px; gap: 16px; }
+  .card-image { flex: auto; width: 100%; }
+  .section-block, .research-info { padding: 16px; }
 }
 
-
-/* Navigation Bar*/
-
-nav {
-	background-color: #333;
-	overflow: hidden;
-}
-nav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-nav a:hover {
-	background-color: #ddd;
-	color: black;
-}
-.active {
-	background-color: #4CAF50;
-}
-
-
-.video-container {
-  display: flex;
-  justify-content: center;
-}
-
-.image-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-hr {
-  height: 20px; /* change the height of hr */
-  width: 50%; /* change the width of hr */
-  background-color: black; /* set the background color of hr */
-  border: none; /* remove any border around hr */
-  margin: 20px auto; /* center hr horizontally and add some space around it */
-}
-
-/* Include any custom CSS styling here! */
-<style>
-.image-container {
-    display: flex; /* 使用 flex 布局 */
-}
-
-.profilePhoto {
-    margin-right: 10px; /* 图像之间的右边距，可根据需要调整 */
-}
-
-.profilePhoto img {
-    max-width: 100%; /* 图像宽度不超过容器宽度 */
-    height: auto; /* 保持图像纵横比 */
-}
-</style>
-
+.example-category + .example-category { margin-top: 24px; padding-top: 20px; border-top: 1px solid #ddd; }
+.example-category h3 { margin: 0 0 12px; font-size: 1.2rem; color: #2a4d69; }
+.example-category ul { margin-bottom: 0; }
